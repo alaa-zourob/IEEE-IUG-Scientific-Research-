@@ -1,0 +1,629 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Arial", sans-serif;
+}
+
+body {
+  background: #eef7ff;
+  color: #003b78;
+}
+
+/* Page Background */
+.page {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.78), rgba(235, 247, 255, 0.95)),
+    url("images/background.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Header */
+.top-header {
+  width: 100%;
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.ieee-logo {
+  width: 200px;
+}
+
+.research-logo {
+  width: 200px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 10px 20px 35px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.08;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #004184;
+  text-shadow: 0 10px 25px rgba(0, 65, 130, 0.16);
+}
+
+.line {
+  width: 220px;
+  height: 6px;
+  margin: 30px auto;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    #003f8c,
+    #00b7ff,
+    #003f8c
+  );
+  background-size: 200% 100%;
+  animation: waveLine 4s linear infinite;
+  box-shadow: 0 4px 15px rgba(0,130,210,0.35);
+}
+
+@keyframes waveLine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes waveLine {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 900px;
+  margin: auto;
+  color: #333;
+  line-height: 1.9;
+  text-align: center;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+/* Workshops */
+.workshops {
+  width: 82%;
+  max-width: 1100px;
+  margin: 10px auto 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.workshop-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 26px;
+  padding: 22px 30px;
+  display: grid;
+
+  /* تم تعديلها عشان تكفي 3 دوائر جنب بعض */
+  grid-template-columns: 75px 1fr 220px;
+
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 18px 40px rgba(0, 74, 140, 0.13);
+  transition: 0.35s ease;
+  animation: fadeUp 0.8s ease both;
+}
+
+.workshop-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 50px rgba(0, 74, 140, 0.2);
+}
+
+.number {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0077c8, #003f8c);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(0, 84, 160, 0.28);
+}
+
+.workshop-card h3 {
+  font-size: 25px;
+  color: #003f7f;
+  font-weight: 800;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+}
+
+/* كل الدوائر نفس الحجم */
+.icons a {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  min-height: 58px;
+
+  border-radius: 50%;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  font-size: 28px;
+
+  box-shadow: 0 10px 25px rgba(0, 65, 120, 0.12);
+  transition: 0.3s ease;
+
+  overflow: hidden;
+}
+
+.icons a:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 28px rgba(0, 95, 168, 0.25);
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.drive img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Trainer Image Circle */
+.trainer-img {
+  padding: 0;
+  overflow: hidden;
+  border: 3px solid white;
+}
+
+.trainer-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.trainer-img:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  background: linear-gradient(135deg, #004b93, #0077c8);
+  padding: 55px 20px 45px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/* Social Icons */
+
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.social-section a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+  text-decoration: none;
+
+  transition: 0.35s ease;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #00264d;
+
+  text-align: center;
+
+  padding: 28px 20px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* Branch Name */
+
+.branch-name {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Chair Name */
+
+.chair-name {
+  color: #d8ecff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+
+/* =========================
+   MOBILE CONTACT + FOOTER
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 45px 15px 35px;
+  }
+
+  .contact-section h2 {
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+
+  .social-section {
+    gap: 18px;
+  }
+
+  .social-section a {
+    width: 50px;
+    height: 50px;
+    font-size: 23px;
+  }
+
+  footer {
+    padding: 24px 15px;
+  }
+
+  .branch-name {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .chair-name {
+    font-size: 13px;
+  }
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.workshop-card:nth-child(1) { animation-delay: 0.1s; }
+.workshop-card:nth-child(2) { animation-delay: 0.2s; }
+.workshop-card:nth-child(3) { animation-delay: 0.3s; }
+.workshop-card:nth-child(4) { animation-delay: 0.4s; }
+.workshop-card:nth-child(5) { animation-delay: 0.5s; }
+.workshop-card:nth-child(6) { animation-delay: 0.6s; }
+.workshop-card:nth-child(7) { animation-delay: 0.7s; }
+.workshop-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .ieee-logo {
+    width: 170px;
+  }
+
+  .research-logo {
+    width: 180px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .workshops {
+    width: 90%;
+  }
+
+  .workshop-card {
+    grid-template-columns: 65px 1fr 205px;
+    padding: 24px;
+  }
+
+  .workshop-card h3 {
+    font-size: 21px;
+  }
+
+  .icons {
+    gap: 12px;
+  }
+
+  .icons a {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+    font-size: 25px;
+  }
+}
+
+/* WhatsApp */
+.social-section a:nth-child(1):hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: white;
+}
+/* Instagram */
+.social-section a:nth-child(2):hover {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  border-color: #dc2743;
+  color: white;
+}
+
+/* Facebook */
+.social-section a:nth-child(3):hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  color: white;
+}
+
+/* LinkedIn */
+.social-section a:nth-child(4):hover {
+  background: #0A66C2;
+  border-color: #0A66C2;
+  color: white;
+}
+  .social-section a:hover {
+  transform: translateY(-6px) scale(1.08);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .page {
+    background-attachment: scroll;
+  }
+
+  .top-header {
+    padding: 22px 5%;
+  }
+
+  .ieee-logo {
+    width: 120px;
+  }
+
+  .research-logo {
+    width: 130px;
+  }
+
+  .hero {
+    padding: 30px 15px 25px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .line {
+    width: 90px;
+    height: 4px;
+    margin: 20px auto;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .workshops {
+    width: 92%;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .workshop-card {
+    grid-template-columns: 54px 1fr;
+    grid-template-areas:
+      "number title"
+      "icons icons";
+    padding: 20px;
+    gap: 15px;
+    border-radius: 22px;
+  }
+
+  .number {
+    grid-area: number;
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .workshop-card h3 {
+    grid-area: title;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .icons {
+    grid-area: icons;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    gap: 14px;
+  }
+
+  .icons a {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 23px;
+  }
+
+  .social-section {
+    gap: 18px;
+  }
+
+  .social-section a {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  /* WhatsApp */
+.social-section a:nth-child(1):hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: white;
+}
+
+  footer p {
+    font-size: 17px;
+  }
+}
+
+
+/* Poster Popup */
+.poster-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 20, 50, 0.72);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  z-index: 9999;
+  transition: 0.35s ease;
+}
+
+.poster-popup.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.poster-popup img {
+  width: min(88vw, 520px);
+  max-height: 88vh;
+  object-fit: contain;
+
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+
+  transform: scale(0.9);
+  transition: 0.35s ease;
+}
+
+.poster-popup.active img {
+  transform: scale(1);
+}
+
+@media (max-width: 600px) {
+  .poster-popup img {
+    width: 90vw;
+    max-height: 82vh;
+    border-radius: 12px;
+  }
+}
